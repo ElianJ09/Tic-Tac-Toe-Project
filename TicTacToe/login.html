@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icon.png">
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyCY6j4p9LDFGBqby15GM4f1_94VVPW-siQ",
+          authDomain: "tic-tac-toe-game-585c3.firebaseapp.com",
+          projectId: "tic-tac-toe-game-585c3",
+          storageBucket: "tic-tac-toe-game-585c3.appspot.com",
+          messagingSenderId: "1034190970108",
+          appId: "1:1034190970108:web:91e2de1611f95959aa0b79"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.firestore();
+    </script>
+
+    <title>Tic Tac Toe!</title>
+</head>
+<body>
+    <div class="container-content">
+        <!-- CUADRO PARA LOGEARSE -->
+        <div class="container-login">
+            <h1>Bienvenido a Tic Tac Toe!</h1>
+            <p class="text-instructions">Inicia sesion para guardar tu progreso!</p>
+
+            <p class="name-user-lb">Nombre</p>
+            <input type="text" id="name-user-txt">
+
+            <button id="login-button" onclick="OpenPageLogin()">Ingresar</button>
+            <button id="guest-button" onclick="OpenPageGame()">Ingresar como invitado</button>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+*{
+    cursor: default;
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #fff;
+}
+
+.container-game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+}
+
+.board-game {
+    width: 100%;
+    height: 100%;
+    display: inline;
+    background-color: gray;
+}
+
+.board-game > div{
+    width: 32.65%;
+    height: 32.65%;
+    float: left;
+    position: relative;
+}
+
+.square-top-left {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    
+}
+
+.square-top {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+}
+
+.square-top-right {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+
+.square-left {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    
+}
+
+.square-center {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+}
+
+.square-right {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+
+.square-bottom-left {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    
+}
+
+.square-bottom {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
+
+.scores {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-left: -240px;
+}
+
+.scores > p {
+    float: left;
+    position: relative;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.scores > p > span {
+    font-size: 24px;
+}
+
+.winner-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 120px;
+    margin-left: -160px;
+    margin-top: -72px;
+    text-align: center;
+    font-size: 32px;
+    color: black;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.text-winner {
+    margin-top: 40px;
+}
+
+.o {
+    border-radius: 120px;
+    width: 60%;
+    height: 60%;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 16px;
+    margin: 10%;
+}
+
+.x {
+    background-color: #fff;
+    height: 178px;
+    width: 20px;
+    position: relative;
+    margin: auto;
+    transform: rotate(45deg);
+}
+
+.x:after{
+    background-color: #fff;
+    content: "";
+    height: 20px;
+    left: -78px;
+    position: absolute;
+    top: 45%;
+    width: 178px;    
+}
+
+.num-games-container {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.num-games-container > p {
+    float: left;
+    position: relative;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.num-games-container > p > span {
+    font-size: 24px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icon.png">
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyCY6j4p9LDFGBqby15GM4f1_94VVPW-siQ",
+          authDomain: "tic-tac-toe-game-585c3.firebaseapp.com",
+          projectId: "tic-tac-toe-game-585c3",
+          storageBucket: "tic-tac-toe-game-585c3.appspot.com",
+          messagingSenderId: "1034190970108",
+          appId: "1:1034190970108:web:91e2de1611f95959aa0b79"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.firestore();
+    </script>
+
+    <title>Tic Tac Toe!</title>
+</head> 
+<body>
+    <!-- TABLERO DE PUNTAJE -->
+    <div class="scores">
+        <!-- PUNTAJE PRIMER JUGADOR -->
+        <p class="player1">
+            <span id="text-player-1">Jugador 1: (x)</span>
+            <br>
+            <span id="user-name-txt">Invitado</span>
+            <br>
+            <span id="score-p1">0</span>
+        </p>
+        
+        <!-- PUNTAJE EMPATE -->
+        <p class="ties">
+            <span id="text-ties">-</span>
+            <br>
+            <span id="score-ties">0</span>
+        </p>
+
+        <!-- PUNTAJE DEL SEGUNDO JUGADOR -->
+        <p class="player2">
+            <span id="text-player-2">Jugador 2: (o)</span>
+            <br>
+            <span id="user-machine-txt">Maquina</span>
+            <br>
+            <span id="score-p2">0</span>
+        </p>
+    </div>
+
+    <div class = "container-game">
+        <div class="board-game">
+            <!-- PRIMERA FILA DE LA INTERFAZ -->
+            <div class="square-top-left" onclick="addNewFigure(event)">
+            </div>
+            <div class="square-top" onclick="addNewFigure(event)">
+            </div>
+            <div class="square-top-right" onclick="addNewFigure(event)">
+            </div>
+
+            <!-- SEGUNDA FILA DE LA INTERFAZ -->
+            <div class="square-left" onclick="addNewFigure(event)">
+            </div>
+            <div class="square-center" onclick="addNewFigure(event)">
+            </div>
+            <div class="square-right" onclick="addNewFigure(event)">
+            </div>
+
+            <!-- TERCERA FILA DE LA INTERFAZ -->
+            <div class="square-bottom-left" onclick="addNewFigure(event)">
+            </div>
+            <div class="square-bottom" onclick="addNewFigure(event)">
+            </div>
+            <div class="square-bottom-right" onclick="addNewFigure(event)">
+            </div>
+        </div>
+    </div>
+
+    <div class="num-games-container">
+        <p class="num-games">
+            <span id="text-num-games"> Partidas jugadas: </span>
+            <span id="games">0</span>
+        </p>
+    </div>
+    <!-- <div class="winner-player">
+        <p class="text-winner">
+            Player 1 win!
+        </p>
+    </div> 
+    ESTA SECCION CREA EL MENSAJE DE QUIEN GANO-->
+
+
+    <!-- <div class="o"></div>
+    <div class="x"></div> ESTA SECCION ES 
+    PARA HACER LO DEL CIRCULITO Y LA X-->
+    <script src="index.js"></script>
+</body>
+
+</html>
